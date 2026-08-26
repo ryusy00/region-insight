@@ -132,7 +132,7 @@ a {
 }
 
 .letter-i {
-  width: clamp(68px, 7vw, 102px);
+  width: clamp(83px, 7vw, 117px);
 }
 
 .letter-svg {
@@ -183,9 +183,22 @@ a {
 
 .letter-button:hover .letter-svg path,
 .letter-button:focus-visible .letter-svg path {
-  fill: var(--aqua);
-  filter: drop-shadow(0 0 13px rgba(0, 188, 199, .35));
-  transform: translateY(-2px);
+  filter:
+    drop-shadow(-10px -3px 0 rgba(0, 210, 220, .72))
+    drop-shadow(-20px -5px 7px rgba(0, 205, 216, .32))
+    drop-shadow(0 0 10px rgba(0, 188, 199, .22));
+  transform: none;
+}
+
+/* 호버 시 글자 본체는 기존 파란색을 유지하고 청록색 잔상만 표시 */
+.letter-r:hover .letter-svg path,
+.letter-r:focus-visible .letter-svg path {
+  fill: #0758d9;
+}
+
+.letter-i:hover .letter-svg path,
+.letter-i:focus-visible .letter-svg path {
+  fill: #167fd6;
 }
 
 .letter-button:hover .hover-label,
@@ -650,7 +663,7 @@ a {
   display: grid;
   grid-template-columns: minmax(190px, 260px) 1fr;
   align-items: center;
-  gap: clamp(10px, 7vw, 20px);
+  gap: clamp(40px, 7vw, 60px);
   padding-bottom: 2rem;
   /* padding-left: 12.5rem; */
   border-bottom: 1px solid #306be0;
@@ -658,7 +671,6 @@ a {
 
 .research-logo {
   display: block;
-  width: 150px;
 }
 
 .research-logo img {
@@ -873,15 +885,14 @@ a {
   display: grid;
   grid-template-columns: minmax(190px, 260px) 1fr;
   align-items: center;
-  gap: clamp(10px, 7vw, 20px);
-  /* padding-left: 12.5rem; */
+  gap: clamp(40px, 7vw, 60px);
   padding-bottom: 2rem;
+  /* padding-left: 12.5rem; */
   border-bottom: 1px solid #306be0;
 }
 
 .introduction-logo {
   display: block;
-  width: 150px;
 }
 
 .introduction-logo img {
@@ -1088,5 +1099,107 @@ a {
   .inquiry-buttons {
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+
+/* Research / Introduction page entrance sequence */
+.research-body::before,
+.introduction-body::before {
+  content: "";
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #fff;
+  pointer-events: none;
+  animation: page-white-curtain .48s ease .12s forwards;
+}
+
+.research-logo,
+.research-message,
+.research-page > .research-row,
+.research-footer,
+.introduction-logo,
+.introduction-message,
+.introduction-page > .introduction-row,
+.introduction-footer {
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(7px);
+  will-change: opacity, transform, filter;
+}
+
+.research-logo,
+.introduction-logo {
+  animation: content-reveal .68s cubic-bezier(.2, .72, .25, 1) .42s forwards;
+}
+
+.research-message,
+.introduction-message {
+  animation: content-reveal .7s cubic-bezier(.2, .72, .25, 1) .7s forwards;
+}
+
+.research-page > .research-row:nth-of-type(1),
+.introduction-page > .introduction-row:nth-of-type(1) {
+  animation: content-reveal .72s cubic-bezier(.2, .72, .25, 1) 1.02s forwards;
+}
+
+.research-page > .research-row:nth-of-type(2),
+.introduction-page > .introduction-row:nth-of-type(2) {
+  animation: content-reveal .72s cubic-bezier(.2, .72, .25, 1) 1.26s forwards;
+}
+
+.introduction-page > .introduction-row:nth-of-type(3) {
+  animation: content-reveal .72s cubic-bezier(.2, .72, .25, 1) 1.5s forwards;
+}
+
+.research-footer {
+  animation: content-reveal .65s cubic-bezier(.2, .72, .25, 1) 1.55s forwards;
+}
+
+.introduction-footer {
+  animation: content-reveal .65s cubic-bezier(.2, .72, .25, 1) 1.78s forwards;
+}
+
+@keyframes page-white-curtain {
+  0%, 55% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes content-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(7px);
+  }
+  55% {
+    opacity: .72;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-body::before,
+  .introduction-body::before {
+    display: none;
+    animation: none;
+  }
+
+  .research-logo,
+  .research-message,
+  .research-page > .research-row,
+  .research-footer,
+  .introduction-logo,
+  .introduction-message,
+  .introduction-page > .introduction-row,
+  .introduction-footer {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
   }
 }
