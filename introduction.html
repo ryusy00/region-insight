@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INTRODUCTION | 리전인사이트</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="introduction-body">
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="리전인사이트 홈">
+      <img src="images/logo.png" alt="리전인사이트 REGION INSIGHT">
+    </a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="./introduction.html" aria-current="page">RI 소개</a>
+      <a href="./research.html">연구사업</a>
+    </nav>
+  </header>
+
+  <main class="introduction-page">
+    <header class="introduction-intro">
+      <a class="introduction-logo" href="./index.html" aria-label="메인페이지로 이동">
+        <img src="images/logo-img.png" alt="리전인사이트 REGION INSIGHT">
+      </a>
+      <div class="introduction-message">
+        <span>INTRODUCTION</span>
+        <p>리전인사이트는 지역의 변화와 가능성을 데이터로 발견하고,<br>지속 가능한 성장을 위해 실질적인 전략과 인사이트를 제시합니다.</p>
+      </div>
+    </header>
+
+    <section class="introduction-row" aria-labelledby="company-title">
+      <h1 id="company-title">회사소개</h1>
+      <div class="introduction-copy">
+        <strong>리전인사이트(Region Insight)</strong>
+        <p>리전인사이트는 지역의 현안을 분석하고 데이터 기반의 통찰을 통해 더 나은 지역의 미래를 제안하는 정책연구 전문기관입니다.</p>
+      </div>
+    </section>
+
+    <section id="inquiry" class="introduction-row" aria-labelledby="inquiry-title">
+      <h1 id="inquiry-title">연구문의</h1>
+      <form id="researchInquiry" class="simple-inquiry-form">
+        <label for="inquiryContent">문의내용</label>
+        <textarea id="inquiryContent" name="message" rows="6" placeholder="내용을 입력하세요" required></textarea>
+        <div class="inquiry-buttons">
+          <button type="submit" class="send-button">SEND</button>
+          <button type="reset" class="delete-button">DEL</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="introduction-row location-row" aria-labelledby="location-title">
+      <h1 id="location-title">오시는 길</h1>
+      <div class="location-content">
+        <iframe title="리전인사이트 위치" src="https://www.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%B2%A8%EB%8B%A8%EC%97%B0%EC%8B%A0%EB%A1%9C%20284&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><strong>주소</strong> 광주광역시 북구 첨단연신로 284, 1011호</p>
+      </div>
+    </section>
+
+    <footer class="introduction-footer">
+      <a href="./index.html" class="introduction-back"><span aria-hidden="true">←</span> BACK</a>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelector('#researchInquiry').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const message = this.elements.message.value.trim();
+      if (!message) return;
+      const subject = encodeURIComponent('[리전인사이트 연구문의] 홈페이지 문의');
+      const body = encodeURIComponent(message);
+      window.location.href = `mailto:irie@irie.re.kr?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
