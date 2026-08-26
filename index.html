@@ -19,20 +19,77 @@
   </header> -->
 
   <main id="home" class="hero">
-    <div class="wave wave-left" aria-hidden="true"></div>
-    <div class="wave wave-right" aria-hidden="true"></div>
+    <svg class="wave-art" viewBox="0 0 1600 500" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="waveBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#315ee9" stop-opacity=".45"/>
+          <stop offset="43%" stop-color="#5f9ff4" stop-opacity=".22"/>
+          <stop offset="60%" stop-color="#54b9ef" stop-opacity=".18"/>
+          <stop offset="100%" stop-color="#1fbfd1" stop-opacity=".38"/>
+        </linearGradient>
+        <path id="flowA" d="M-120 270 C170 128 360 355 665 244 C930 148 1140 122 1720 258"/>
+        <path id="flowB" d="M-120 182 C165 338 400 118 690 244 C970 365 1210 126 1720 196"/>
+      </defs>
+      <g class="wave-lines wave-lines-a">
+        <use href="#flowA" transform="translate(0 -42)"/><use href="#flowA" transform="translate(0 -35)"/>
+        <use href="#flowA" transform="translate(0 -28)"/><use href="#flowA" transform="translate(0 -21)"/>
+        <use href="#flowA" transform="translate(0 -14)"/><use href="#flowA" transform="translate(0 -7)"/>
+        <use href="#flowA"/><use href="#flowA" transform="translate(0 7)"/>
+        <use href="#flowA" transform="translate(0 14)"/><use href="#flowA" transform="translate(0 21)"/>
+        <use href="#flowA" transform="translate(0 28)"/><use href="#flowA" transform="translate(0 35)"/>
+        <use href="#flowA" transform="translate(0 42)"/>
+      </g>
+      <g class="wave-lines wave-lines-b">
+        <use href="#flowB" transform="translate(0 -36)"/><use href="#flowB" transform="translate(0 -30)"/>
+        <use href="#flowB" transform="translate(0 -24)"/><use href="#flowB" transform="translate(0 -18)"/>
+        <use href="#flowB" transform="translate(0 -12)"/><use href="#flowB" transform="translate(0 -6)"/>
+        <use href="#flowB"/><use href="#flowB" transform="translate(0 6)"/>
+        <use href="#flowB" transform="translate(0 12)"/><use href="#flowB" transform="translate(0 18)"/>
+        <use href="#flowB" transform="translate(0 24)"/><use href="#flowB" transform="translate(0 30)"/>
+        <use href="#flowB" transform="translate(0 36)"/>
+      </g>
+    </svg>
 
     <div class="logo-menu" aria-label="리전인사이트 주요 메뉴">
       <a class="letter-button letter-r" href="./research.html" aria-label="연구 페이지로 이동">
         <svg class="letter-svg" viewBox="0 0 250 310" role="img" aria-hidden="true">
-          <path d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
+          <defs>
+            <linearGradient id="rBlueGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0636b8"/>
+              <stop offset="1" stop-color="#0879df"/>
+            </linearGradient>
+            <linearGradient id="rAquaOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00c9cf" stop-opacity="1"/>
+              <stop offset="42%" stop-color="#00c9cf" stop-opacity=".92"/>
+              <stop offset="76%" stop-color="#00c9cf" stop-opacity=".18"/>
+              <stop offset="100%" stop-color="#00c9cf" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="glow-path glow-soft" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
+          <path class="glow-path glow-echo" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
+          <path class="main-letter" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
+          <path class="overlay-letter" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
         </svg>
         <span class="hover-label">reserch</span>
       </a>
 
       <a class="letter-button letter-i" href="./introduction.html" aria-label="소개 페이지로 이동">
         <svg class="letter-svg" viewBox="0 0 90 310" role="img" aria-hidden="true">
-          <path d="M13 15H77V295H13Z"/>
+          <defs>
+            <linearGradient id="iBlueGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0636b8"/>
+              <stop offset="1" stop-color="#168bdb"/>
+            </linearGradient>
+            <linearGradient id="iAquaOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00c9cf" stop-opacity="1"/>
+              <stop offset="65%" stop-color="#00c9cf" stop-opacity=".82"/>
+              <stop offset="100%" stop-color="#00c9cf" stop-opacity=".12"/>
+            </linearGradient>
+          </defs>
+          <path class="glow-path glow-soft" d="M13 15H77V295H13Z"/>
+          <path class="glow-path glow-echo" d="M13 15H77V295H13Z"/>
+          <path class="main-letter" d="M13 15H77V295H13Z"/>
+          <path class="overlay-letter" d="M13 15H77V295H13Z"/>
         </svg>
         <span class="hover-label">introduction</span>
       </a>
