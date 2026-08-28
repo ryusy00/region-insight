@@ -1,12 +1,3 @@
-const menuButton = document.querySelector('.menu-button');
-
-if (menuButton) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = menuButton.classList.toggle('is-open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-  });
-}
-
 const inquiryForm = document.querySelector('#inquiryForm');
 
 if (inquiryForm) {
