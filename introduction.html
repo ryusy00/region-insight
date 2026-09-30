@@ -17,42 +17,73 @@
     </nav>
   </header> -->
 
-  <main class="introduction-page">
+  <main class="introduction-page tab-page">
     <header class="introduction-intro">
       <a class="introduction-logo" href="./index.html" aria-label="메인페이지로 이동">
         <img src="./images/logo-img.png" alt="리전인사이트 REGION INSIGHT">
       </a>
       <div class="introduction-message">
         <span>INTRODUCTION</span>
-        <p>리전인사이트는 지역의 변화와 가능성을 데이터로 발견하고,<br>지속 가능한 성장을 위해 실질적인 전략과 인사이트를 제시합니다.</p>
+        <p>리전인사이트는 지역사회의 더 나은 선택을 함께 만들어 갑니다.</p>
       </div>
+      <nav class="section-nav" aria-label="소개 페이지 목차" role="tablist">
+        <button type="button" id="tab-company" role="tab" aria-controls="company" aria-selected="false" tabindex="-1">회사소개</button>
+        <button type="button" id="tab-inquiry" role="tab" aria-controls="inquiry" aria-selected="false" tabindex="-1">연구문의</button>
+        <button type="button" id="tab-location" role="tab" aria-controls="location" aria-selected="false" tabindex="-1">오시는 길</button>
+      </nav>
     </header>
 
-    <section class="introduction-row" aria-labelledby="company-title">
+    <section id="company" class="introduction-row" role="tabpanel" aria-labelledby="tab-company" hidden>
       <h1 id="company-title">회사소개</h1>
       <div class="introduction-copy">
         <strong>리전인사이트(Region Insight)</strong>
-        <p>리전인사이트는 지역의 현안을 분석하고 데이터 기반의 통찰을 통해 더 나은 지역의 미래를 제안하는 정책연구 전문기관입니다.</p>
+        <p>
+          리전인사이트는 지역의 현안과 변화를 데이터와 연구를 통해 분석하고, <br>
+          지역의 지속 가능한 발전을 위한 실질적인 정책과 전략을 제안하는 사회과학 연구기관입니다.
+        </p>
       </div>
     </section>
 
-    <section id="inquiry" class="introduction-row" aria-labelledby="inquiry-title">
-      <h1 id="inquiry-title">연구문의</h1>
-      <form id="researchInquiry" class="simple-inquiry-form">
-        <label for="inquiryContent">문의내용</label>
-        <textarea id="inquiryContent" name="message" rows="6" placeholder="내용을 입력하세요" required></textarea>
-        <div class="inquiry-buttons">
-          <button type="submit" class="send-button">SEND</button>
-          <button type="reset" class="delete-button">DEL</button>
-        </div>
-      </form>
+    <section id="inquiry" class="introduction-row" role="tabpanel" aria-labelledby="tab-inquiry" hidden>
+      	<h1 id="inquiry-title">연구문의</h1>
+			<form id="researchInquiry" class="simple-inquiry-form" action="/" method="post">
+				<!-- Spring Security의 요청 검증용 값 -->
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+				
+				<label for="inquiryContent">문의내용</label>
+				
+				<textarea id="inquiryContent" name="message" rows="6" 
+						  maxlength="10000" placeholder="내용을 입력하세요" required></textarea>
+				
+				<div class="inquiry-buttons">
+				    <button type="submit" class="send-button">SEND</button>
+				    <button type="reset" class="delete-button">DEL</button>
+				</div>
+			</form>
     </section>
 
-    <section class="introduction-row location-row" aria-labelledby="location-title">
+    <section id="location" class="introduction-row location-row" role="tabpanel" aria-labelledby="tab-location" hidden>
       <h1 id="location-title">오시는 길</h1>
       <div class="location-content">
         <iframe title="리전인사이트 위치" src="https://www.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%B2%A8%EB%8B%A8%EC%97%B0%EC%8B%A0%EB%A1%9C%20284&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p><strong>주소</strong> 광주광역시 북구 첨단연신로 284, 1011호</p>
+        <address class="location-details">
+          <p>
+            <strong>Address</strong> 
+            전남광주통합특별시 북구 첨단연신로 284, 1011호
+          </p>
+          <p>
+            <strong>TEL</strong> 
+            <a href="tel:0625756267">062-575-6267</a>
+          </p>
+          <p>
+            <strong>FAX</strong> 
+            062-575-6269
+          </p>
+          <p>
+            <strong>E-MAIL</strong>
+            <a href="mailto:irie@irie.re.kr">irie@irie.re.kr</a>
+          </p>
+        </address>
       </div>
     </section>
 
@@ -60,5 +91,6 @@
       <a href="./index.html" class="introduction-back"><span aria-hidden="true">←</span> BACK</a>
     </footer>
   </main>
+  <script src="./js/tabs.js"></script>
 </body>
 </html>
