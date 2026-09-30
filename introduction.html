@@ -20,7 +20,7 @@
   <main class="introduction-page">
     <header class="introduction-intro">
       <a class="introduction-logo" href="./index.html" aria-label="메인페이지로 이동">
-        <img src="images/logo.png" alt="리전인사이트 REGION INSIGHT">
+        <img src="./images/logo-img.png" alt="리전인사이트 REGION INSIGHT">
       </a>
       <div class="introduction-message">
         <span>INTRODUCTION</span>
@@ -60,16 +60,5 @@
       <a href="./index.html" class="introduction-back"><span aria-hidden="true">←</span> BACK</a>
     </footer>
   </main>
-
-  <script>
-    document.querySelector('#researchInquiry').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const message = this.elements.message.value.trim();
-      if (!message) return;
-      const subject = encodeURIComponent('[리전인사이트 연구문의] 홈페이지 문의');
-      const body = encodeURIComponent(message);
-      window.location.href = `mailto:irie@irie.re.kr?subject=${subject}&body=${body}`;
-    });
-  </script>
 </body>
 </html>
