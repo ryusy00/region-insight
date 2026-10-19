@@ -6,10 +6,10 @@
   <title>리전인사이트 | Region Insight</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="ri-vector-page">
   <!-- <header class="site-header">
     <a class="brand" href="#home" aria-label="리전인사이트 홈">
-      <img src="images/logo.png" alt="로고">
+      <img src="./images/logo.png" alt="로고">
     </a>
 
     <nav class="main-nav" aria-label="주요 메뉴">
@@ -50,56 +50,51 @@
       </g>
     </svg>
 
-    <div class="hero-branding">
-    <div class="logo-menu" aria-label="리전인사이트 주요 메뉴">
-      <a class="letter-button letter-r" href="research.html" aria-label="연구 페이지로 이동">
-        <svg class="letter-svg" viewBox="0 0 250 310" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="rBlueGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#0636b8"/>
-              <stop offset="1" stop-color="#0879df"/>
-            </linearGradient>
-            <linearGradient id="rAquaOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#00c9cf" stop-opacity="1"/>
-              <stop offset="42%" stop-color="#00c9cf" stop-opacity=".92"/>
-              <stop offset="76%" stop-color="#00c9cf" stop-opacity=".18"/>
-              <stop offset="100%" stop-color="#00c9cf" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path class="glow-path glow-soft" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
-          <path class="glow-path glow-echo" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
-          <path class="main-letter" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
-          <path class="overlay-letter" d="M22 15H137C202 15 232 55 232 111C232 153 211 183 174 198L238 295H159L104 210V156H136C157 156 169 141 169 114C169 87 156 75 133 75H87V295H22Z"/>
-        </svg>
-        <span class="hover-label">RESEARCH</span>
-      </a>
-
-      <a class="letter-button letter-i" href="introduction.html" aria-label="소개 페이지로 이동">
-        <svg class="letter-svg" viewBox="0 0 90 310" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="iBlueGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#0636b8"/>
-              <stop offset="1" stop-color="#168bdb"/>
-            </linearGradient>
-            <linearGradient id="iAquaOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#00c9cf" stop-opacity="1"/>
-              <stop offset="65%" stop-color="#00c9cf" stop-opacity=".82"/>
-              <stop offset="100%" stop-color="#00c9cf" stop-opacity=".12"/>
-            </linearGradient>
-          </defs>
-          <path class="glow-path glow-soft" d="M13 15H77V295H13Z"/>
-          <path class="glow-path glow-echo" d="M13 15H77V295H13Z"/>
-          <path class="main-letter" d="M13 15H77V295H13Z"/>
-          <path class="overlay-letter" d="M13 15H77V295H13Z"/>
-        </svg>
-        <span class="hover-label">INTRODUCTION</span>
-      </a>
-    </div>
-    <div class="hero-brand-name" aria-label="리전인사이트 REGION INSIGHT">
-      <strong>리전인사이트</strong>
-      <span>REGION INSIGHT</span>
-    </div>
-    </div>
+    <div class="hero-branding ri-vector-branding">
+	    <div class="logo-menu ri-vector-menu">
+	      <svg class="ri-vector-logo" xmlns="http://www.w3.org/2000/svg" viewBox="80 90 400 415" role="img" aria-labelledby="riLogoTitle">
+	        <title id="riLogoTitle">리전인사이트 REGION INSIGHT — R 연구사업, i 소개</title>
+	        <defs>
+	          <linearGradient id="riBrandBlue" gradientUnits="userSpaceOnUse" x1="109" y1="170" x2="340" y2="260">
+	            <stop offset="0" stop-color="#052774" />
+	            <stop offset=".45" stop-color="#0065df" />
+	            <stop offset=".78" stop-color="#009af5" />
+	            <stop offset="1" stop-color="#00cbe0" />
+	          </linearGradient>
+	          <linearGradient id="riIBlue" gradientUnits="userSpaceOnUse" x1="362" y1="150" x2="449" y2="178">
+	            <stop stop-color="#0040a8" />
+	            <stop offset=".56" stop-color="#007bfa" />
+	            <stop offset="1" stop-color="#00d0e1" />
+	          </linearGradient>
+	          <radialGradient id="riLime" gradientUnits="userSpaceOnUse" cx="327" cy="201" r="94">
+	            <stop offset="0" stop-color="#efff00" />
+	            <stop offset=".24" stop-color="#d5f400" stop-opacity=".95" />
+	            <stop offset=".55" stop-color="#9de650" stop-opacity=".65" />
+	            <stop offset="1" stop-color="#6edda7" stop-opacity="0" />
+	          </radialGradient>
+	          <path id="riRShape" d="M119 112H269C313 112 346 147 346 194C346 230 324 256 282 263L339 336Q343 344 335 344H259Q253 344 249 338L200 270H176V334Q176 344 166 344H119Q109 344 109 334V223Q109 213 119 213H249C261 213 269 205 269 194C269 183 261 175 249 175H119Q109 175 109 165V123Q109 112 119 112Z" />
+	          <path id="riIShape" d="M372 112H435Q445 112 445 122V172Q445 182 435 182H372Q362 182 362 172V122Q362 112 372 112ZM372 207H435Q445 207 445 217V334Q445 344 435 344H372Q362 344 362 334V217Q362 207 372 207Z" />
+	        </defs>
+	        <a class="ri-symbol ri-symbol-r" href="./research.html" aria-label="연구사업 페이지로 이동">
+	          <g class="ri-symbol-art">
+	            <use href="#riRShape" fill="url(#riBrandBlue)" />
+	            <use href="#riRShape" fill="url(#riLime)" />
+	          </g>
+	        </a>
+	        <a class="ri-symbol ri-symbol-i" href="./introduction.html" aria-label="소개 페이지로 이동">
+	          <g class="ri-symbol-art">
+	            <use href="#riIShape" fill="url(#riIBlue)" />
+	          </g>
+	        </a>
+	        <g class="ri-vector-name" text-anchor="middle" font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+	          <text x="277" y="431" fill="#080808" font-size="65" font-weight="900" lengthAdjust="spacingAndGlyphs">리전인사이트</text>
+	          <text x="279" y="484" fill="#3d4652" font-family="Arial, sans-serif" font-size="35" font-weight="600" letter-spacing="2" lengthAdjust="spacingAndGlyphs">REGION INSIGHT</text>
+	        </g>
+	      </svg>
+	      <span class="ri-menu-label ri-label-r" aria-hidden="true">RESEARCH</span>
+	      <span class="ri-menu-label ri-label-i" aria-hidden="true">INTRODUCTION</span>
+	    </div>
+	  </div>
   </main>
 
   <script src="./js/script.js"></script>
