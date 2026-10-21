@@ -8,144 +8,170 @@
   <link rel="stylesheet" href="./css/research-tabs.css">
 </head>
 <body class="research-body">
-  <!-- <header class="site-header">
-    <a class="brand" href="./index.html" aria-label="리전인사이트 홈">
-      <img src="./images/logo.png" alt="리전인사이트 REGION INSIGHT">
+	<!-- <header class="site-header">
+    <a class="brand" href="<%= riBase %>/index.jsp" aria-label="리전인사이트 홈">
+      <img src="<%= riBase %>/images/logo.png" alt="리전인사이트 REGION INSIGHT">
     </a>
     <nav class="main-nav" aria-label="주요 메뉴">
-      <a href="./introduction.html">RI 소개</a>
-      <a href="./research.html" aria-current="page">연구사업</a>
+      <a href="<%= riBase %>/introduction.jsp">RI 소개</a>
+      <a href="<%= riBase %>/research.jsp" aria-current="page">연구사업</a>
     </nav>
   </header> -->
 
-  <main class="research-page tab-page research-redesign" data-default-tab="research-area">
-    <header class="research-intro">
-      <a class="research-logo" href="./index.html" aria-label="리전인사이트 메인으로 이동">
-        <img src="./images/logo.png" alt="리전인사이트 REGION INSIGHT">
-      </a>
-      <div class="research-message">
-        <span>RESEARCH</span>
-        <p>리전인사이트는 데이터와 현장에 기반하여 지역의 변화와 현안을 연구합니다.</p>
-      </div>
-      <nav class="section-nav" aria-label="연구 페이지 목차" role="tablist">
-        <button type="button" id="tab-research-area" role="tab" aria-controls="research-area" aria-selected="true" tabindex="0">AREAS</button>
-        <button type="button" id="tab-research-process" role="tab" aria-controls="research-process" aria-selected="false" tabindex="-1">PROCESS</button>
-        <button type="button" id="tab-research-history" role="tab" aria-controls="research-history" aria-selected="false" tabindex="-1">PROJECTS</button>
-      </nav>
-    </header>
+	<main class="research-page research-redesign scroll-page">
+		<header class="research-intro">
+			<a class="research-logo" href="<%= riBase %>/index.jsp"
+				aria-label="리전인사이트 메인으로 이동"> <img
+				src="<%= riBase %>/images/logo.png" alt="리전인사이트 REGION INSIGHT">
+			</a>
+			<div class="research-message">
+				<span>RESEARCH</span>
+				<p>리전인사이트는 데이터와 현장에 기반하여 지역의 변화와 현안을 연구합니다.</p>
+			</div>
 
-    <section id="research-area" class="research-row" role="tabpanel" aria-labelledby="tab-research-area">
-      <div class="research-visual" aria-label="리전인사이트의 다섯 가지 연구영역">
-        <h1 class="research-panel-title"><span>RESEARCH</span> AREAS</h1>
-        <div class="research-orbit" aria-hidden="true"></div>
-        <div class="research-core" aria-label="리전인사이트 REGION INSIGHT">
-          <img src="./images/logo-img.png" alt="리전인사이트 REGION INSIGHT">
-        </div>
-        <article class="research-bubble area-economy">
-          <span class="bubble-number">01</span>
-          <img class="intro-value-icon" src="./images/icon-economy.png" alt="지역경제·산업 연구">
-          <h2>지역경제·산업 연구</h2><p>지역경제 분석과<br>산업 발전전략</p>
-        </article>
-        <article class="research-bubble area-jobs">
-          <span class="bubble-number">02</span>
-          <img class="intro-value-icon" src="./images/icon-jobs.png" alt="일자리·고용정책 연구">
-          <h2>일자리·고용정책 연구</h2><p>일자리사업 발굴과<br>고용정책 수립</p>
-        </article>
-        <article class="research-bubble area-policy">
-          <span class="bubble-number">03</span>
-          <img class="intro-value-icon" src="./images/icon-policy.png" alt="정책·사업계획 수립">
-          <h2>정책·사업계획 수립</h2><p>기본계획 및<br>실행계획 수립</p>
-        </article>
-        <article class="research-bubble area-feasibility">
-          <span class="bubble-number">04</span>
-          <img class="intro-value-icon" src="./images/icon-feasibility.png" alt="타당성·경제성 분석">
-          <h2>타당성·경제성 분석</h2><p>사업의 실현 가능성과<br>경제적 효과 분석</p>
-        </article>
-        <article class="research-bubble area-development">
-          <span class="bubble-number">05</span>
-          <img class="intro-value-icon" src="./images/icon-development.png" alt="지역발전·활성화 연구">
-          <h2>지역발전·활성화 연구</h2><p>균형발전 전략과<br>지속 가능한 지역 성장</p>
-        </article>
-      </div>
-    </section>
+		</header>
 
-    <section id="research-process" class="research-row process-panel" role="tabpanel" aria-labelledby="tab-research-process" hidden>
-      <h1 class="research-panel-title"><span>RESEARCH</span> PROCESS</h1>
-      <ol class="research-process-list">
-			<li class="process-step process-step-1">
-				<span class="process-number">01</span>
-				<div class="process-circle">
-			        <img class="intro-value-icon" src="./images/icon-process-diagnosis.png" alt="현황 진단">
-					<h2>현황 진단</h2>
-					<p>지역 여건 및 현황 분석<br>문제의식 도출</p>
-				</div>
-				<strong class="process-result">이슈와 과제 도출</strong>
-			</li>
-			<li class="process-step process-step-2">
-				<span class="process-number">02</span>
-				<div class="process-circle">
-			        <img class="intro-value-icon" src="./images/icon-process-analysis.png" alt="자료·데이터 분석">
-					<h2>자료·데이터 분석</h2>
-					<p>통계 및 빅데이터 분석<br>전문가 자문 및 현장 조사</p>
-				</div>
-				<strong class="process-result">근거 기반 분석</strong>
-			</li>
-			<li class="process-step process-step-3">
-				<span class="process-number">03</span>
-				<div class="process-circle">
-					<img class="intro-value-icon" src="./images/icon-process-review.png" alt="정책·사업 검토">
-					<h2>정책·사업 검토</h2>
-					<p>정책환경 및 사례 분석<br>타당성·경제성 검토</p>
-				</div>
-				<strong class="process-result">대안 검토 및 우선순위 설정</strong>
-			</li>
-			<li class="process-step process-step-4">
-				<span class="process-number">04</span>
-				<div class="process-circle">
-					<img class="intro-value-icon" src="./images/icon-process-strategy.png" alt="전략 수립">
-					<h2>전략 수립</h2>
-					<p>실행 가능한 정책·사업<br>전략과 추진방안 제시</p>
-				</div>
-				<strong class="process-result">실행 전략 도출</strong>
-			</li>
-		</ol>
-    </section>
 
-    <section id="research-history" class="research-row projects-panel" role="tabpanel" aria-labelledby="tab-research-history" hidden>
-      <h1 class="research-panel-title"><span>RESEARCH</span> PROJECTS</h1>
-      <ol class="research-project-list">
-        <li>OO지역 문화체험시설 건립 경제성 및 파급효과 분석</li>
-        <li>지역일자리 목표공시제 평가대비 컨설팅</li>
-        <li>청년정책 기본계획 수립 연구</li>
-        <li>OO군 교육발전특구 연차별 세부실행계획 용역</li>
-        <li>OO 일자리 성과평가 체계 연구</li>
-        <li>OO 지역 지산맞 사업 참여자 경제활동 및 성과분석 연구</li>
-        <li>OO 지역특화 일자리 사업참여분석 및 신규사업발굴 연구</li>
-        <li>OO 지역 식품제조업 이중구조 실태조사 및 일자리모델 개발 연구</li>
-        <li>OO 일자리사업 중장기 성과평가 및 신규프로젝트 사업 개발 연구</li>
-        <li>OO 지산맞 사업 중장기 성과분석 및 신규사업 발굴에 대한 연구</li>
-        <li>재정지원 일자리사업 컨설팅 운영체계 및 가이드라인 연구</li>
-        <li>지산맞 사업 신규과제 발굴을 위한 연구(수행실적 2건)</li>
-        <li>OO 지역 권역별 일자리창출 추진방향 연구</li>
-        <li>OO 지역 교육발전특구 세부계획 수립</li>
-        <li>OO 지역특화 고용정책 기본계획 수립 연구</li>
-        <li>OO군 교육발전특구 기본계획 수립(수행실적 3건)</li>
-        <li>OO 지역특화 고용정책 기본구상 수립 연구</li>
-        <li>지방주도형 투자일자리 모델 타당성 분석 연구</li>
-        <li>OO 지역 청년 일자리창출 기본계획 수립 연구</li>
-        <li>OO 지역 문화관광시설 조성사업에 따른 경제성 분석</li>
-        <li>재정지원 일자리사업 평가체계 개선방안 연구</li>
-        <li>OO 지역 정주환경 개선 및 교류시설 조성에 따른 경제성 분석</li>
-        <li>OO 지역형 플러스 사업의 성과평가 분석 연구</li>
-        <li>OO 권역 일자리 발전전략 수립</li>
-        <li>OO 지역 일자리 발전전략 연구</li>
-      </ol>
-    </section>
+		<section id="research-area" class="research-row research-area-cards">
+			<h1 class="research-panel-title">
+				<span>RESEARCH</span> AREAS
+			</h1>
+			<div class="research-area-card-grid" aria-label="리전인사이트의 다섯 가지 연구영역">
+				<article class="research-area-card area-economy">
+					<span class="area-card-number">01</span> <img
+						class="area-card-icon" src="<%= riBase %>/images/icon-economy.png"
+						alt="지역경제·산업 연구">
+					<h2>지역경제·산업 연구</h2>
+					<p>
+						지역경제 분석과<br>산업 발전전략
+					</p>
+				</article>
+				<article class="research-area-card area-jobs">
+					<span class="area-card-number">02</span> <img
+						class="area-card-icon" src="<%= riBase %>/images/icon-jobs.png"
+						alt="일자리·고용정책 연구">
+					<h2>일자리·고용정책 연구</h2>
+					<p>
+						일자리사업 발굴과<br>고용정책 수립
+					</p>
+				</article>
+				<article class="research-area-card area-policy">
+					<span class="area-card-number">03</span> <img
+						class="area-card-icon" src="<%= riBase %>/images/icon-policy.png"
+						alt="정책·사업계획 수립">
+					<h2>정책·사업계획 수립</h2>
+					<p>
+						기본계획 및<br>실행계획 수립
+					</p>
+				</article>
+				<article class="research-area-card area-feasibility">
+					<span class="area-card-number">04</span> <img
+						class="area-card-icon"
+						src="<%= riBase %>/images/icon-feasibility.png" alt="타당성·경제성 분석">
+					<h2>타당성·경제성 분석</h2>
+					<p>
+						사업의 실현 가능성과<br>경제적 효과 분석
+					</p>
+				</article>
+				<article class="research-area-card area-development">
+					<span class="area-card-number">05</span> <img
+						class="area-card-icon"
+						src="<%= riBase %>/images/icon-development.png" alt="지역발전·활성화 연구">
+					<h2>지역발전·활성화 연구</h2>
+					<p>
+						균형발전 전략과<br>지속 가능한 지역 성장
+					</p>
+				</article>
+			</div>
+		</section>
 
-    <footer class="research-footer">
-      <a href="./index.html" class="research-back"><span aria-hidden="true">←</span> BACK</a>
-    </footer>
-  </main>
-  <script src="./js/tabs.js"></script>
+		<section id="research-process" class="research-row process-panel">
+			<h1 class="research-panel-title">
+				<span>RESEARCH</span> PROCESS
+			</h1>
+			<ol class="research-process-list">
+				<li class="process-step process-step-1"><span
+					class="process-number">01</span>
+					<div class="process-circle">
+						<img class="intro-value-icon"
+							src="./images/icon-process-diagnosis.png" alt="현황 진단">
+						<h2>현황 진단</h2>
+						<p>
+							지역 여건 및 현황 분석<br>문제의식 도출
+						</p>
+					</div> <strong class="process-result">이슈와 과제 도출</strong></li>
+				<li class="process-step process-step-2"><span
+					class="process-number">02</span>
+					<div class="process-circle">
+						<img class="intro-value-icon"
+							src="./images/icon-process-analysis.png"
+							alt="자료·데이터 분석">
+						<h2>자료·데이터 분석</h2>
+						<p>
+							통계 및 빅데이터 분석<br>전문가 자문 및 현장 조사
+						</p>
+					</div> <strong class="process-result">근거 기반 분석</strong></li>
+				<li class="process-step process-step-3"><span
+					class="process-number">03</span>
+					<div class="process-circle">
+						<img class="intro-value-icon"
+							src="./images/icon-process-review.png" alt="정책·사업 검토">
+						<h2>정책·사업 검토</h2>
+						<p>
+							정책환경 및 사례 분석<br>타당성·경제성 검토
+						</p>
+					</div> <strong class="process-result">대안 검토 및 우선순위 설정</strong></li>
+				<li class="process-step process-step-4"><span
+					class="process-number">04</span>
+					<div class="process-circle">
+						<img class="intro-value-icon"
+							src="./images/icon-process-strategy.png" alt="전략 수립">
+						<h2>전략 수립</h2>
+						<p>
+							실행 가능한 정책·사업<br>전략과 추진방안 제시
+						</p>
+					</div> <strong class="process-result">실행 전략 도출</strong></li>
+			</ol>
+		</section>
+
+		<section id="research-history" class="research-row projects-panel">
+			<h1 class="research-panel-title">
+				<span>RESEARCH</span> PROJECTS
+			</h1>
+			<ol class="research-project-list">
+				<li>OO지역 문화체험시설 건립 경제성 및 파급효과 분석</li>
+				<li>지역일자리 목표공시제 평가대비 컨설팅</li>
+				<li>청년정책 기본계획 수립 연구</li>
+				<li>OO군 교육발전특구 연차별 세부실행계획 용역</li>
+				<li>OO 일자리 성과평가 체계 연구</li>
+				<li>OO 지역 지산맞 사업 참여자 경제활동 및 성과분석 연구</li>
+				<li>OO 지역특화 일자리 사업참여분석 및 신규사업발굴 연구</li>
+				<li>OO 지역 식품제조업 이중구조 실태조사 및 일자리모델 개발 연구</li>
+				<li>OO 일자리사업 중장기 성과평가 및 신규프로젝트 사업 개발 연구</li>
+				<li>OO 지산맞 사업 중장기 성과분석 및 신규사업 발굴에 대한 연구</li>
+				<li>재정지원 일자리사업 컨설팅 운영체계 및 가이드라인 연구</li>
+				<li>지산맞 사업 신규과제 발굴을 위한 연구(수행실적 2건)</li>
+				<li>OO 지역 권역별 일자리창출 추진방향 연구</li>
+				<li>OO 지역 교육발전특구 세부계획 수립</li>
+				<li>OO 지역특화 고용정책 기본계획 수립 연구</li>
+				<li>OO군 교육발전특구 기본계획 수립(수행실적 3건)</li>
+				<li>OO 지역특화 고용정책 기본구상 수립 연구</li>
+				<li>지방주도형 투자일자리 모델 타당성 분석 연구</li>
+				<li>OO 지역 청년 일자리창출 기본계획 수립 연구</li>
+				<li>OO 지역 문화관광시설 조성사업에 따른 경제성 분석</li>
+				<li>재정지원 일자리사업 평가체계 개선방안 연구</li>
+				<li>OO 지역 정주환경 개선 및 교류시설 조성에 따른 경제성 분석</li>
+				<li>OO 지역형 플러스 사업의 성과평가 분석 연구</li>
+				<li>OO 권역 일자리 발전전략 수립</li>
+				<li>OO 지역 일자리 발전전략 연구</li>
+			</ol>
+		</section>
+
+		<footer class="research-footer">
+			<a href="./index.html" class="research-back"><span
+				aria-hidden="true">←</span> BACK</a>
+		</footer>
+	</main>
+	<!-- <script src="./js/tabs.js"></script> -->
 </body>
 </html>

@@ -17,146 +17,141 @@
     </nav>
   </header> -->
 
-  <main class="introduction-page tab-page introduction-redesign">
-    <header class="introduction-intro">
-      <a class="introduction-logo" href="./index.html" aria-label="메인페이지로 이동">
+  <main class="introduction-page introduction-redesign scroll-page">
+		<header class="introduction-intro">
+			<a class="introduction-logo" href="./index.html" aria-label="메인페이지로 이동">
         <img src="./images/logo.png" alt="리전인사이트 REGION INSIGHT">
+			</a>
+			<div class="introduction-message">
+				<span>INTRODUCTION</span>
+				<p>리전인사이트는 지역사회의 더 나은 선택을 함께 만들어 갑니다.</p>
+      </div>
+		</header>
+
+		<section id="company" class="introduction-row">
+			<h1 id="company-title" class="intro-panel-heading">
+				ABOUT <span>US</span>
+			</h1>
+			<div class="introduction-copy">
+				<h2 class="intro-company-name">리전인사이트(Region Insight)는</h2>
+				<p>
+					리전인사이트는 지역의 현안과 변화를 데이터와 연구를 통해 분석하고, <br> 지역의 지속 가능한 발전을 위한
+					실질적인 정책과 전략을 제안하는 사회과학 연구기관입니다.
+				</p>
+
+				<div class="intro-values" aria-label="리전인사이트의 연구 가치">
+					<svg class="intro-values-wave" viewBox="0 0 1100 240" preserveAspectRatio="none" aria-hidden="true">
+				<path d="M0 170C80 170 65 220 150 160S270 70 340 140S460 235 540 150S680 60 760 140S920 220 980 160S1050 110 1100 120" /></svg>
+					<article class="intro-value intro-value-objective">
+						<span class="intro-value-number">01</span>
+						<div class="intro-value-circle">
+							<img class="intro-value-icon" src="./images/icon-objectivity.png" alt="객관성">
+							<h3>객관성</h3>
+							<span class="intro-value-en">OBJECTIVITY</span>
+							<p>근거 중심의 분석</p>
+						</div>
+					</article>
+					<article class="intro-value intro-value-expertise">
+						<span class="intro-value-number">02</span>
+						<div class="intro-value-circle">
+							<img class="intro-value-icon" src="./images/icon-expertise.png" alt="전문성">
+							<h3>전문성</h3>
+							<span class="intro-value-en">EXPERTISE</span>
+							<p>체계적인 연구 수행</p>
+						</div>
+					</article>
+					<article class="intro-value intro-value-practicality">
+						<span class="intro-value-number">03</span>
+						<div class="intro-value-circle">
+							<img class="intro-value-icon" src="./images/icon-practicality.png" alt="실용성">
+							<h3>실용성</h3>
+							<span class="intro-value-en">PRACTICALITY</span>
+							<p>실행 가능한 대안 제시</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="inquiry" class="introduction-row" role="tabpanel" aria-labelledby="tab-inquiry">
+      <h1 id="inquiry-title" class="intro-panel-heading">
+        CONTACT <span>US</span>
+      </h1>
+
+      <form id="researchInquiry" class="simple-inquiry-form" action="#inquiry" method="get">
+        <div class="inquiry-info-row">
+          <div class="inquiry-info-field">
+            <label for="inquiryName">성함 / 기관명</label>
+            <input type="text" id="inquiryName" name="senderName" maxlength="100" placeholder="성함/기관명" required="">
+          </div>
+          <div class="inquiry-info-field">
+            <label for="inquiryContact">이메일 / 연락처</label>
+            <input type="text" id="inquiryContact" name="senderContact" maxlength="200" placeholder="이메일/연락처" required="">
+          </div>
+        </div>
+        <label for="inquiryContent">문의내용</label>
+        <textarea id="inquiryContent" name="message" rows="6" maxlength="10000" placeholder="내용을 입력하세요"
+          required=""></textarea>
+        <div class="inquiry-buttons">
+          <button type="submit" class="send-button">SEND</button>
+        </div>
+      </form>
+    </section>
+
+		<section id="location" class="introduction-row location-row">
+			<h1 id="location-title" class="intro-panel-heading">LOCATION</h1>
+			<div class="location-content">
+				<iframe title="리전인사이트 위치" 
+                src="https://www.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%B2%A8%EB%8B%A8%EC%97%B0%EC%8B%A0%EB%A1%9C%20284&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+				<address class="location-details">
+					<p>
+						<strong>Address</strong> 전남광주통합특별시 북구 첨단연신로 284, 1011호
+					</p>
+					<p>
+						<strong>TEL</strong> <a href="tel:0625756267">062-575-6267</a>
+					</p>
+					<p>
+						<strong>FAX</strong> 062-575-6269
+					</p>
+					<p>
+						<strong>E-MAIL</strong> <a href="mailto:irie@irie.re.kr">irie@irie.re.kr</a>
+					</p>
+				</address>
+			</div>
+		</section>
+
+		<footer class="introduction-footer">
+			<a href="<%= riBase %>/index.jsp" class="introduction-back">
+        <span aria-hidden="true">←</span> BACK
       </a>
-      <div class="introduction-message">
-        <span>INTRODUCTION</span>
-        <p>리전인사이트는 지역사회의 더 나은 선택을 함께 만들어 갑니다.</p>
-      </div>
-      <nav class="section-nav" aria-label="소개 페이지 목차" role="tablist">
-        <button type="button" id="tab-company" role="tab" aria-controls="company" aria-selected="true" tabindex="0">ABOUT US</button>
-        <button type="button" id="tab-inquiry" role="tab" aria-controls="inquiry" aria-selected="false" tabindex="-1">CONTACT US</button>
-        <button type="button" id="tab-location" role="tab" aria-controls="location" aria-selected="false" tabindex="-1">LOCATION</button>
-      </nav>
-    </header>
-
-    <section id="company" class="introduction-row" role="tabpanel" aria-labelledby="tab-company">
-      <h1 id="company-title" class="intro-panel-heading">ABOUT <span>US</span></h1>
-      <div class="introduction-copy">
-        <h2 class="intro-company-name">리전인사이트(Region Insight)는</h2>
-        <p>
-          리전인사이트는 지역의 현안과 변화를 데이터와 연구를 통해 분석하고, <br>
-          지역의 지속 가능한 발전을 위한 실질적인 정책과 전략을 제안하는 사회과학 연구기관입니다.
-        </p>
-
-        <div class="intro-values" aria-label="리전인사이트의 연구 가치">
-			<svg class="intro-values-wave" viewBox="0 0 1100 240"
-				preserveAspectRatio="none" aria-hidden="true">
-				<path
-					d="M0 170C80 170 65 220 150 160S270 70 340 140S460 235 540 150S680 60 760 140S920 220 980 160S1050 110 1100 120" /></svg>
-			<article class="intro-value intro-value-objective">
-			  <span class="intro-value-number">01</span>
-			
-			  <div class="intro-value-circle">
-			    <img class="intro-value-icon" src="./images/icon-objectivity.png" alt="객관성">
-			    <h3>객관성</h3>
-			    <span class="intro-value-en">OBJECTIVITY</span>
-			    <p>근거 중심의 분석</p>
-			  </div>
-			</article>
-			<article class="intro-value intro-value-expertise">
-				<span class="intro-value-number">02</span>
-				<div class="intro-value-circle">
-					<img class="intro-value-icon" src="./images/icon-expertise.png" alt="전문성">
-					<h3>전문성</h3>
-					<span class="intro-value-en">EXPERTISE</span>
-					<p>체계적인 연구 수행</p>
-				</div>
-			</article>
-			<article class="intro-value intro-value-practicality">
-				<span class="intro-value-number">03</span>
-				<div class="intro-value-circle">
-					<img class="intro-value-icon" src="./images/icon-practicality.png" alt="실용성">
-					<h3>실용성</h3>
-					<span class="intro-value-en">PRACTICALITY</span>
-					<p>실행 가능한 대안 제시</p>
-				</div>
-			</article>
-		</div>
-      </div>
-    </section>
-
-    <section id="inquiry" class="introduction-row" role="tabpanel" aria-labelledby="tab-inquiry" hidden>
-		  <h1 id="inquiry-title" class="intro-panel-heading">
-		    CONTACT <span>US</span>
-		  </h1>
-		
-		<form id="researchInquiry" class="simple-inquiry-form" action="#inquiry" method="get">
-			<div class="inquiry-info-row">
-			  <div class="inquiry-info-field">
-			    <label for="inquiryName">성함 / 기관명</label>
-			    <input type="text" id="inquiryName" name="senderName" maxlength="100" placeholder="성함/기관명" required>
-			  </div>
-			  <div class="inquiry-info-field">
-			    <label for="inquiryContact">이메일 / 연락처</label>
-			    <input type="text" id="inquiryContact" name="senderContact" maxlength="200" placeholder="이메일/연락처" required>
-			  </div>
-			</div>
-			<label for="inquiryContent">문의내용</label>
-			<textarea id="inquiryContent" name="message" rows="6" maxlength="10000" placeholder="내용을 입력하세요" required></textarea>
-			<div class="inquiry-buttons">
-  				<button type="submit" class="send-button">SEND</button>
-			</div>
-		</form>
-	</section>
-
-    <section id="location" class="introduction-row location-row" role="tabpanel" aria-labelledby="tab-location" hidden>
-      <h1 id="location-title" class="intro-panel-heading">LOCATION</h1>
-      <div class="location-content">
-        <iframe title="리전인사이트 위치" src="https://www.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%81%EA%B5%AC%20%EC%B2%A8%EB%8B%A8%EC%97%B0%EC%8B%A0%EB%A1%9C%20284&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <address class="location-details">
-          <p>
-            <strong>Address</strong> 
-            전남광주통합특별시 북구 첨단연신로 284, 1011호
-          </p>
-          <p>
-            <strong>TEL</strong> 
-            <a href="tel:0625756267">062-575-6267</a>
-          </p>
-          <p>
-            <strong>FAX</strong> 
-            062-575-6269
-          </p>
-          <p>
-            <strong>E-MAIL</strong>
-            <a href="mailto:irie@irie.re.kr">irie@irie.re.kr</a>
-          </p>
-        </address>
-      </div>
-    </section>
-
-    <footer class="introduction-footer">
-      <a href="./index.html" class="introduction-back"><span aria-hidden="true">←</span> BACK</a>
-    </footer>
-  </main>
+		</footer>
+	</main>
 
   <script src="./js/tabs.js"></script>
   <script>
-  /* GitHub Pages design preview: no server-side mail is sent. */
-  (function () {
-    var form = document.getElementById('researchInquiry');
-    if (!form) return;
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-      var name = form.elements.senderName.value.trim();
-      var contact = form.elements.senderContact.value.trim();
-      var content = form.elements.message.value.trim();
-      if (!name || !contact || !content) {
-        alert('성함/기관명, 이메일/연락처, 문의 내용을 모두 입력해주세요.');
-        return;
-      }
-      var message = ['성함/기관명: ' + name, '이메일/연락처: ' + contact, '', '[문의 내용]', content].join(String.fromCharCode(10));
-      if (message.length > 10000) {
-        alert('전체 내용은 10,000자 이내로 입력해주세요.');
-        return;
-      }
-      alert('디자인 확인용 페이지입니다. 실제 메일은 발송되지 않습니다.');
-    });
-  }());
+    /* GitHub Pages design preview: no server-side mail is sent. */
+    (function () {
+      var form = document.getElementById('researchInquiry');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        var name = form.elements.senderName.value.trim();
+        var contact = form.elements.senderContact.value.trim();
+        var content = form.elements.message.value.trim();
+        if (!name || !contact || !content) {
+          alert('성함/기관명, 이메일/연락처, 문의 내용을 모두 입력해주세요.');
+          return;
+        }
+        var message = ['성함/기관명: ' + name, '이메일/연락처: ' + contact, '', '[문의 내용]', content].join(String.fromCharCode(10));
+        if (message.length > 10000) {
+          alert('전체 내용은 10,000자 이내로 입력해주세요.');
+          return;
+        }
+        alert('디자인 확인용 페이지입니다. 실제 메일은 발송되지 않습니다.');
+      });
+    }());
   </script>
 </body>
 </html>

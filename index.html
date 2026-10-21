@@ -7,52 +7,66 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="ri-vector-page">
-  <!-- <header class="site-header">
+	<!-- <header class="site-header">
     <a class="brand" href="#home" aria-label="리전인사이트 홈">
-      <img src="./images/logo.png" alt="로고">
+      <img src="<%= riBase %>/images/logo.png" alt="로고">
     </a>
 
     <nav class="main-nav" aria-label="주요 메뉴">
-      <a href="./introduction.html">RI 소개</a>
-      <a href="./research.html">연구사업</a>
+      <a href="<%= riBase %>/introduction.jsp">RI 소개</a>
+      <a href="<%= riBase %>/research.jsp">연구사업</a>
     </nav>
   </header> -->
 
-  <main id="home" class="hero">
-    <svg class="wave-art" viewBox="0 0 1600 500" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="waveBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#315ee9" stop-opacity=".45"/>
-          <stop offset="43%" stop-color="#5f9ff4" stop-opacity=".22"/>
-          <stop offset="60%" stop-color="#54b9ef" stop-opacity=".18"/>
-          <stop offset="100%" stop-color="#1fbfd1" stop-opacity=".38"/>
-        </linearGradient>
-        <path id="flowA" d="M-120 270 C170 128 360 355 665 244 C930 148 1140 122 1720 258"/>
-        <path id="flowB" d="M-120 182 C165 338 400 118 690 244 C970 365 1210 126 1720 196"/>
-      </defs>
-      <g class="wave-lines wave-lines-a">
-        <use href="#flowA" transform="translate(0 -42)"/><use href="#flowA" transform="translate(0 -35)"/>
-        <use href="#flowA" transform="translate(0 -28)"/><use href="#flowA" transform="translate(0 -21)"/>
-        <use href="#flowA" transform="translate(0 -14)"/><use href="#flowA" transform="translate(0 -7)"/>
-        <use href="#flowA"/><use href="#flowA" transform="translate(0 7)"/>
-        <use href="#flowA" transform="translate(0 14)"/><use href="#flowA" transform="translate(0 21)"/>
-        <use href="#flowA" transform="translate(0 28)"/><use href="#flowA" transform="translate(0 35)"/>
-        <use href="#flowA" transform="translate(0 42)"/>
-      </g>
-      <g class="wave-lines wave-lines-b">
-        <use href="#flowB" transform="translate(0 -36)"/><use href="#flowB" transform="translate(0 -30)"/>
-        <use href="#flowB" transform="translate(0 -24)"/><use href="#flowB" transform="translate(0 -18)"/>
-        <use href="#flowB" transform="translate(0 -12)"/><use href="#flowB" transform="translate(0 -6)"/>
-        <use href="#flowB"/><use href="#flowB" transform="translate(0 6)"/>
-        <use href="#flowB" transform="translate(0 12)"/><use href="#flowB" transform="translate(0 18)"/>
-        <use href="#flowB" transform="translate(0 24)"/><use href="#flowB" transform="translate(0 30)"/>
-        <use href="#flowB" transform="translate(0 36)"/>
-      </g>
-    </svg>
+	<main id="home" class="hero">
+		<svg class="wave-art" viewBox="0 0 1600 500" preserveAspectRatio="none" aria-hidden="true">
+	      <defs>
+	        <linearGradient id="waveBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+	          <stop offset="0%" stop-color="#315ee9" stop-opacity=".45" />
+	          <stop offset="43%" stop-color="#5f9ff4" stop-opacity=".22" />
+	          <stop offset="60%" stop-color="#54b9ef" stop-opacity=".18" />
+	          <stop offset="100%" stop-color="#1fbfd1" stop-opacity=".38" />
+	        </linearGradient>
+	        <path id="flowA"
+					d="M-120 270 C170 128 360 355 665 244 C930 148 1140 122 1720 258" />
+	        <path id="flowB"
+					d="M-120 182 C165 338 400 118 690 244 C970 365 1210 126 1720 196" />
+	      </defs>
+	      <g class="wave-lines wave-lines-a">
+	        <use href="#flowA" transform="translate(0 -42)" />
+				<use href="#flowA" transform="translate(0 -35)" />
+	        <use href="#flowA" transform="translate(0 -28)" />
+				<use href="#flowA" transform="translate(0 -21)" />
+	        <use href="#flowA" transform="translate(0 -14)" />
+				<use href="#flowA" transform="translate(0 -7)" />
+	        <use href="#flowA" />
+				<use href="#flowA" transform="translate(0 7)" />
+	        <use href="#flowA" transform="translate(0 14)" />
+				<use href="#flowA" transform="translate(0 21)" />
+	        <use href="#flowA" transform="translate(0 28)" />
+				<use href="#flowA" transform="translate(0 35)" />
+	        <use href="#flowA" transform="translate(0 42)" />
+	      </g>
+	      <g class="wave-lines wave-lines-b">
+	        <use href="#flowB" transform="translate(0 -36)" />
+				<use href="#flowB" transform="translate(0 -30)" />
+	        <use href="#flowB" transform="translate(0 -24)" />
+				<use href="#flowB" transform="translate(0 -18)" />
+	        <use href="#flowB" transform="translate(0 -12)" />
+				<use href="#flowB" transform="translate(0 -6)" />
+	        <use href="#flowB" />
+				<use href="#flowB" transform="translate(0 6)" />
+	        <use href="#flowB" transform="translate(0 12)" />
+				<use href="#flowB" transform="translate(0 18)" />
+	        <use href="#flowB" transform="translate(0 24)" />
+				<use href="#flowB" transform="translate(0 30)" />
+	        <use href="#flowB" transform="translate(0 36)" />
+	      </g>
+	    </svg>
 
-    <div class="hero-branding ri-vector-branding">
-	    <div class="logo-menu ri-vector-menu">
-	      <svg class="ri-vector-logo" xmlns="http://www.w3.org/2000/svg" viewBox="80 90 400 415" role="img" aria-labelledby="riLogoTitle">
+		<div class="hero-branding ri-vector-branding">
+			<div class="logo-menu ri-vector-menu">
+				<svg class="ri-vector-logo" xmlns="http://www.w3.org/2000/svg" viewBox="80 90 400 415" role="img" aria-labelledby="riLogoTitle">
 	        <title id="riLogoTitle">리전인사이트 REGION INSIGHT — R 연구사업, i 소개</title>
 	        <defs>
 	          <linearGradient id="riBrandBlue" gradientUnits="userSpaceOnUse" x1="109" y1="170" x2="340" y2="260">
@@ -91,12 +105,23 @@
 	          <text x="279" y="484" fill="#3d4652" font-family="Arial, sans-serif" font-size="35" font-weight="600" letter-spacing="2" lengthAdjust="spacingAndGlyphs">REGION INSIGHT</text>
 	        </g>
 	      </svg>
-	      <span class="ri-menu-label ri-label-r" aria-hidden="true">RESEARCH</span>
-	      <span class="ri-menu-label ri-label-i" aria-hidden="true">INTRODUCTION</span>
-	    </div>
-	  </div>
-  </main>
+				<span class="ri-menu-label ri-label-r" aria-hidden="true">RESEARCH</span>
+				<span class="ri-menu-label ri-label-i" aria-hidden="true">INTRODUCTION</span>
+				<nav class="ri-entry-menu" aria-label="주요 페이지 이동">
+					<a class="ri-entry-link" data-symbol="r"
+						href="./research.html"> <span>Research</span><span
+						class="ri-entry-arrow" aria-hidden="true">↗</span>
+					</a>
+					<a class="ri-entry-link" data-symbol="i" href="./introduction.html">
+						<span>Introduction</span>
+						<span class="ri-entry-arrow" aria-hidden="true">↗</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</main>
 
-  <script src="./js/script.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/main-entry-buttons.js"></script>
 </body>
 </html>
